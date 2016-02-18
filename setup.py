@@ -8,7 +8,7 @@ with codecs_open('README.rst', encoding='utf-8') as f:
 
 
 setup(name='python-RIBBIT',
-      version='1.0.1',
+      version='1.0.2',
       description='frog.tips RIBBIT client',
       long_description=long_description,
       classifiers=[],

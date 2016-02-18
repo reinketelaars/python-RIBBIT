@@ -9,6 +9,7 @@ MIN_TIPS = 0
 MAX_TIPS = 50
 """ Maximum number of tips in a CROAK. """
 
+
 class FrogTip(univ.Sequence):
     componentType = namedtype.NamedTypes(
         namedtype.NamedType('number', univ.Integer()),

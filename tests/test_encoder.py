@@ -21,6 +21,6 @@ def test_encoding_valid_CROAK():
 
 def test_encoding_invalid_CROAK_raises_exception():
     with pytest.raises(ValueError) as excinfo:
-        encoded = encode_CROAK({None: None})
+        encode_CROAK({None: None})
 
     assert 'Error during FROG tip encoding' in str(excinfo.value)

@@ -56,7 +56,7 @@ class RIBBITClient(object):
         try:
             croak_resp = requests.get(self.endpoint, headers=self.headers)
             croak_resp.raise_for_status()
-        except HTTPError as exc:
+        except requests.HTTPError as exc:
             raise RIBBITClientError(
                 'Error during CROAK request: %s' % exc.message)
 
