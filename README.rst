@@ -21,7 +21,7 @@ RIBBIT
                             .......   ...'..    c'....
 
 Python RIBBIT client.
-   
+
 Quick start
 -------------------------
 

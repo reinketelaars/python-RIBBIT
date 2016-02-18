@@ -6,13 +6,9 @@ from setuptools import setup, find_packages
 with codecs_open('README.rst', encoding='utf-8') as f:
     long_description = f.read()
 
-requirements = [
-    req.strip() for req
-    in open('requirements.txt').readlines() if not req.startswith('#')]
-
 
 setup(name='python-RIBBIT',
-      version='1.0.0',
+      version='1.0.1',
       description='frog.tips RIBBIT client',
       long_description=long_description,
       classifiers=[],
@@ -24,7 +20,10 @@ setup(name='python-RIBBIT',
       packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
       include_package_data=True,
       zip_safe=False,
-      install_requires=requirements,
+      install_requires=[
+          'requests>=2.9,<3.0',
+          'pyasn1>=0.1,<0.2',
+      ],
       extras_require={
           'test': [
               'pytest',
