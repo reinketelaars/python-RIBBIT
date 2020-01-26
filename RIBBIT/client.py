@@ -23,7 +23,7 @@ class RIBBITClient(object):
     """
 
     DEFAULT_ENDPOINT = 'http://frog.tips/api/1/tips'
-    DEFAULT_HEADERS = {'Accept': 'application/der-stream'}
+    DEFAULT_HEADERS = {'Accept': 'application/json'}
 
     def __init__(self, endpoint=DEFAULT_ENDPOINT, headers=None):
         """
@@ -74,4 +74,4 @@ class RIBBITClient(object):
         if self._croak_cache is None or refresh_cache:
             self._croak_cache = self.croak()
 
-        return self._croak_cache[random.choice(self._croak_cache.keys())]
+        return self._croak_cache[random.choice(list(self._croak_cache.keys()))]
