@@ -5,7 +5,7 @@ from .definition import Croak
 import json
 
 
-def decode_CROAK(json):
+def decode_CROAK(json_data):
     """
     Decode a sequence of DER encoded RIBBIT protocol FROG tips.
 
@@ -20,7 +20,8 @@ def decode_CROAK(json):
         A dict of FROG tips, keyed by their number.
     """
     try:
-        decoded = json.loads(json)['tips']
+        decoded = json.load(json_data)['tips'] 
+
         return {int(frog_tip['number']):str(frog_tip['tip']) for frog_tip in decoded}
     except:
         raise
