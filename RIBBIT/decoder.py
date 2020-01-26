@@ -20,7 +20,7 @@ def decode_CROAK(json_data):
         A dict of FROG tips, keyed by their number.
     """
     try:
-        decoded = json.load(json_data)['tips'] 
+        decoded = json.loads(json_data)['tips'] 
 
         return {int(frog_tip['number']):str(frog_tip['tip']) for frog_tip in decoded}
     except:
